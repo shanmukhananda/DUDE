@@ -10,13 +10,13 @@ script_dir=$(realpath $(dirname $0))
 ${script_dir}/private/install-from-apt.sh
 
 configure() {
+    useradd -ms /bin/bash desktop
     sed -i '/TerminalServerUsers/d' /etc/xrdp/sesman.ini
     sed -i '/TerminalServerAdmins/d' /etc/xrdp/sesman.ini
     xrdp-keygen xrdp auto
-    echo "root:root" | chpasswd
-    mkdir -p /home/root
-    touch /home/root/.xsession
-    echo "mate-session" > /home/root/.xsession
+    echo "desktop:desktop" | chpasswd
+    touch /home/desktop/.xsession
+    echo "mate-session" > /home/desktop/.xsession
 }
 
 configure
