@@ -15,6 +15,8 @@ configure() {
     sed -i '/TerminalServerAdmins/d' /etc/xrdp/sesman.ini
     xrdp-keygen xrdp auto
     echo "root:root" | chpasswd
+    mkdir -p /home/root
+    touch /home/root/.xsession
     echo "mate-session" > /home/root/.xsession
 }
 
