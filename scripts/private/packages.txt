@@ -1,12 +1,4 @@
-fonts-liberation
-fonts-wqy-microhei
-gconf-service
-libappindicator1
-libcurl3
-libnspr4
-libnss3
-mate-core
-mate-desktop-environment
-mate-notification-daemon
+lxde
+lxdm
 supervisor
 xrdp
