@@ -2,6 +2,3 @@ lxde
 lxdm
 supervisor
 xrdp
-git
-vim
-mc
