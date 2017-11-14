@@ -1,6 +1,4 @@
-FROM ubuntu:16.04
-MAINTAINER swined@gmail.com
-
+FROM ubuntu:17.10
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y xrdp lxde lxdm supervisor git vim mc && apt-get clean
 
